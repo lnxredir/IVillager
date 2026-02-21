@@ -1,0 +1,51 @@
+# ============== IVillager config ==============
+# Shops are opened with: /ivillager <shop name> or /ivl <shop name>
+
+# Shop to open when no name is given: /ivillager or /ivl
+default_shop: default
+
+shops:
+  # ----- Example: default shop (player gives ingredients, gets result) -----
+  default:
+    display_name: "IVillager"
+    trades:
+      # One trade: 64 cobblestone -> 1 diamond
+      - item: cobblestone:64
+        trade: diamond:1
+
+  # ----- Example: shop with two cost slots (1 grass + 1 seed -> 1 grass block) -----
+  example_buy:
+    display_name: "Buy Shop"
+    trades:
+      # Player gives 1 grass and 1 wheat seed (both slots), gets 1 grass block
+      - item:
+          - "short_grass:1"
+          - "wheat_seeds:1"
+        trade: grass_block:1
+
+  # ----- Example: trade with enchantments on the input item -----
+  example_sell:
+    display_name: "Enchanted"
+    trades:
+      # Player gives 1 diamond sword (Sharpness III, Unbreaking III), gets 1 diamond sword back
+      # (Vanilla only supports one result item per trade; multiple outputs are approximated.)
+      - item: diamond_sword:1
+        enchantments: sharpness:3,unbreaking:3
+        trade: diamond_sword:1
+
+  # ----- Example: potions and tipped arrows (material:amount:potion_type) -----
+  example_potions:
+    display_name: "Alchemist"
+    trades:
+      # Buy a Potion of Healing for 2 emeralds
+      - item: emerald:2
+        trade: potion:1:healing
+      # Buy a Splash Potion of Strong Healing
+      - item: emerald:4
+        trade: splash_potion:1:strong_healing
+      # Buy a Lingering Potion of Poison
+      - item: emerald:3
+        trade: lingering_potion:1:poison
+      # Buy 8 Arrows of Poison (tipped arrows)
+      - item: emerald:1
+        trade: tipped_arrow:8:poison
