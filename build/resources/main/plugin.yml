@@ -1,0 +1,26 @@
+name: IVillager
+version: 1.0.7
+main: com.ivillager.IVillagerPlugin
+description: Opens the vanilla villager trading UI as a configurable shop named IVillager.
+author: IVillager
+api-version: '1.21.11'
+
+commands:
+  ivillager:
+    description: Open IVillager shop or run admin subcommands.
+    usage: /ivillager [shop name|list|reload|create <name>|delete <name>]
+    aliases: [ivl]
+
+permissions:
+  ivillager.use:
+    description: Allows opening all shops.
+    default: true
+  ivillager.admin:
+    description: Full admin; create, delete, reload, and bypass shop restrictions.
+    default: op
+  ivillager.reload:
+    description: Allows reloading config and shop definitions.
+    default: op
+  ivillager.delete:
+    description: Allows deleting shops from config.
+    default: op

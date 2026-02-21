@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ivillager.IVillagerPluginTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-02-21T03:14:18" hostname="C62" time="0.028">
+  <properties/>
+  <testcase name="configResultReturnsCopyOfShops()" classname="com.ivillager.IVillagerPluginTest" time="0.025"/>
+  <testcase name="configResultPreservesDefaultShop()" classname="com.ivillager.IVillagerPluginTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
